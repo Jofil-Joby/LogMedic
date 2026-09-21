@@ -1,0 +1,4 @@
+﻿spec_version: "0.1.0"
+name: log-medic
+version: "0.1.0"
+description: A portable AI agent that analyzes application logs and produces an explainable improvement plan.
