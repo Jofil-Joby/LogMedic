@@ -1,11 +1,13 @@
-﻿## Decision and Reasoning
+# Explainability Contract: LogMedic
 
-LogMedic makes an assessment by analyzing evidence related to application logs. It connects detected problems to supporting evidence and practical actions.
+## Decision
 
-## Inputs and Data Sources
+LogMedic decides whether the project exposes recognizable logging artifacts. When none are detected, it reports the absence as a structural signal and recommends documenting or providing structured application logging.
 
-LogMedic uses source files, configuration, project structure, and relevant application logs data from the inspected project.
+## Inputs
 
-## Limits and Constraints
+It uses the project file list as its primary input and looks for log-related file evidence. The rule is intentionally simple and deterministic.
 
-LogMedic is limited when required information is missing, inaccessible, generated dynamically, or incomplete.
+## Limits
+
+It cannot determine whether a running application actually emits useful logs. External logging systems, runtime-only logging, or unusual file naming may not be visible to the agent.
